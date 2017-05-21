@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block body %}
+{% include 'AppBundle:Partials:menu.html.twig' %}
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+      <div class="title-new">
+        <h1>Nouvelle tâche:</h1>
+      </div>
+      <div class="details">
+        <div class="form">
+          {{ form_start(form) }}
+
+          <div class="formTaskNom">
+            <div class="taskLabel">
+              <label class="control-label required" for="appbundle_task_nom">Nom de la tâche:</label>
+            </div>
+            <div class="taskInput">
+              {{ form_errors(form.nom) }}
+              {{ form_widget(form.nom) }}
+            </div>
+          </div>
+
+          <div class="formTaskContenu">
+            <div class="taskLabel">
+              <label class="control-label required" for="appbundle_task_contenu">Description de la tâche:</label>
+            </div>
+            <div class="taskInput">
+              {{ form_errors(form.contenu) }}
+              {{ form_widget(form.contenu) }}
+            </div>
+          </div>
+
+          <div class="formTaskDate">
+            <div class="taskLabel">
+              <label class="control-label required">Date limite:</label>
+            </div>
+            <div class="taskInput">
+              {{ form_errors(form.dateLimite) }}
+              {{ form_widget(form.dateLimite) }}
+            </div>
+          </div>
+
+          <div class="formTaskImportant">
+            <div class="taskLabel">
+              <label class="control-label required" for="appbundle_task_important">Importance:</label>
+              {{ form_errors(form.important) }}
+              {{ form_widget(form.important) }}
+            </div>
+          </div>
+
+          <div class="createT">
+            <input class="btn btn-link btn-create" type="submit" value="Créer" />
+          </div>
+          {{ form_end(form) }}
+        </div>
+      </div>
+      <a class="btn btn-link btn-retour" href="{{ path('task_index') }}">Retour</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

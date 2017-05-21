@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'AppBundle:Partials:menu.html.twig' %}
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Niveau</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ important.nom }}</td>
+            <td>{{ important.niveau }}</td>
+            <td><a class="btn btn-link" href="{{ path('important_show', { 'id': important.id }) }}">Retour au niveau</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="details">
+        <div class="details_h4">
+
+          {{ form_start(edit_form) }}
+              {{ form_widget(edit_form) }}
+              <input type="submit" class="btn btn-link btn-white" value="Modifier" />
+          {{ form_end(edit_form) }}
+          <div class="btn-form">
+            <div class="btn-supprimer">
+              {{ form_start(delete_form) }}
+              <input type="submit" value="Supprimer" class="btn btn-link btn-white">
+              {{ form_end(delete_form) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="btn btn-link btn-retour" href="{{ path('important_show', { 'id': important.id }) }}">Retour</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

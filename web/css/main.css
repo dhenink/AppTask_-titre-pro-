@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'KaushanScript-Regular';
+  src: url('police/KaushanScript-Regular.otf');
+}
+@font-face {
+  font-family: 'Action_Man';
+  src: url('police/Action-Man/Action_Man.ttf');
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/checklist.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Action_Man';
+
+}
+
+.title {
+  color: white;
+  font-family: 'KaushanScript-Regular', 'Trebuchet MS';
+  font-size:5em;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, 10px 10px 5px #000000;
+}
+
+#custom-menu {
+  margin: 0;
+}
+
+#custom-menu.navbar-default .navbar-brand {
+    color: black;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: 'KaushanScript-Regular';
+}
+#custom-menu.navbar-default {
+    font-size: 25px;
+    background-color: white;
+    border-radius: 35px;
+    border: 0;
+    font-family: 'KaushanScript-Regular';
+}
+#custom-menu.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+#custom-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-menu.navbar-default .navbar-nav>li>a:focus {
+    color: black;
+    background-color: cyan;
+}
+#custom-menu.navbar-default .navbar-nav>li:hover,
+#custom-menu.navbar-default .navbar-nav>li:focus {
+    background-color: cyan;
+}
+#custom-menu.navbar-default .navbar-nav>.active>a,
+#custom-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: black;
+    background-color: white;
+}
+#custom-menu.navbar-default .navbar-toggle {
+    border-color: white;
+}
+#custom-menu.navbar-default .navbar-toggle:hover,
+#custom-menu.navbar-default .navbar-toggle:focus {
+    background-color: #2e2828;
+    border-radius: 20px;
+    border: 1px solid #2e2828;
+}
+#custom-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+#custom-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: white;
+}
+
+.collapse.navbar-collapse.navbar-menubuilder {
+  text-align: center;
+}
+
+.nav.navbar-nav.nav-center {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.onglet {
+  padding: 0 30px 0 30px;
+}
+.hover {
+  background-color: cyan;
+}
+
+.cercle {
+  border: 6px solid black;
+  height: 210px;
+  width: 210px;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+.cercle:hover,
+.cercle:focus {
+  border-radius: 100%;
+  background-color: cyan;
+}
+
+
+.cercle h3 a  {
+  color: black;
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  position: relative;
+  font-size: 21px;
+  top: 75px;
+}
+h3.important {
+  left: 20px;
+  text-align: left;
+  top: 68px;
+
+}
+
+table {
+  margin-top: 80px;
+  border: 2px solid black;
+}
+thead {
+  background-color: cyan;
+}
+tbody {
+  background-color: #d1d1d1;
+  font-weight: bold;
+}
+th, td {
+    text-align: center;
+    font-size: 20px;
+}
+.btn.btn-link {
+  font-size: 18px;
+  background-color: cyan;
+  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  font-weight: bold;
+  box-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, 5px 5px 5px #000000;
+  margin-bottom: 5px;
+}
+.btn.btn-link:hover, .btn.btn-link:focus  {
+  background-color: cyan;
+  text-decoration: none;
+  color: black;
+}
+.fa.fa-times {
+  color: #D50202;
+  font-size: 28px;
+  margin: 0 10px;
+}
+.fa.fa-check-square-o {
+  color: #00D807;
+  font-size: 28px;
+  margin: 0 10px;
+}
+.details {
+  border: 2px solid black;
+  background-color: cyan;
+  height: auto;
+}
+.btn-supprimer {
+  display: inline-block;
+}
+.details_h4 {
+  margin: 30px;
+}
+h1.nom {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 25px;
+  font-style: italic;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, 5px 5px 5px #000000;
+}
+.contenu {
+  font-size: 24px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+h4.check {
+  display: inline-block;
+  font-size: 20px;
+}
+h4 {
+  margin: 0 0 15px 0;
+}
+.btn.btn-link.btn-white {
+  background-color: white;
+  margin: 10px 10px 0 0;
+  font-weight: bold;
+  box-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, 5px 5px 5px #000000;
+}
+.btn-form {
+  display: inline-block;
+  float: right;
+}
+
+.btn.btn-link.btn-retour {
+  margin: 10px 30px 50px 30px;
+  display: block;
+}
+hr {
+  background-color: black;
+  border: 0;
+  height: 2px;
+}
+.task-form {
+  display: inline-block;
+  font-style: italic;
+  font-size: 25px;
+}
+.title-new h1 {
+  text-align: center;
+  color: white;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, 5px 5px 5px #000000;
+  font-style: italic;
+  font-size: 45px;
+  background-color: #d1d1d1;
+  border: 2px solid black;
+  padding: 5px;
+}
+.createI {
+  margin: 20px 0 30px 550px;
+}
+.createT {
+  margin: 20px 0 30px 700px;
+}
+.btn.btn-link.btn-create {
+  background-color: white;
+}
+input.form-control {
+  font-size: 25px;
+}
+
+.FormImportantNom {
+  margin: 0 50px;
+}
+
+.FormImportantNiveau {
+  margin: 0 50px;
+}
+
+.importantLabel {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.taskLabel {
+  margin-top: 20px;
+  font-size: 20px;
+}
+textarea.form-control {
+  font-size: 25px;
+}
+.form-inline {
+  font-size: 25px;
+}
+.form {
+  display: inline-block;
+  margin-left: 200px;
+  width: 850px;
+}
+.checkbox label {
+  font-size: 25px;
+}
+div.nom {
+  margin-bottom: 20px;
+}

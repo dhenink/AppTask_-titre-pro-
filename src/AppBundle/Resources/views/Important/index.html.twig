@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'AppBundle:Partials:menu.html.twig' %}
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Niveau</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for important in importants %}
+          <tr>
+            <td>{{ important.nom }}</td>
+            <td>{{ important.niveau }}</td>
+            <td><a class="btn btn-link" href="{{ path('important_show', { 'id': important.id }) }}">Afficher</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a class="btn btn-link" href="{{ path('important_new') }}">Ajouter un niveau d'importance</a>
+
+      {% endblock %}

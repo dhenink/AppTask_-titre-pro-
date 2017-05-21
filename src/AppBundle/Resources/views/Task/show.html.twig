@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'AppBundle:Partials:menu.html.twig' %}
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Tâches</th>
+            <th>Date limite</th>
+            <th>Niveau d'importance</th>
+            <th>Fait</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>{{ task.nom }}</td>
+            <td>{% if task.dateLimite %}{{ task.dateLimite|date('d-m-Y') }}{% endif %}</td>
+            <td>{{ task.important.nom }}</td>
+            <td>{% if task.fait %}<i class="fa fa-check-square-o" aria-hidden="true"></i>{% else %}<i class="fa fa-times" aria-hidden="true"></i>{% endif %}</td>
+            <td><a class="btn btn-link" href="{% if task.fait %}{{ path('task_edit_done', { 'id': task.id }) }}{% else %}{{ path('task_edit', { 'id': task.id }) }}{% endif %}">Editer la tâche</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="details">
+        <div class="details_h4">
+          <h1 class="nom">&nbsp; {{ task.nom }}</h1>
+          <div class="contenu">&emsp; {{ task.contenu }}</div>
+          <hr>
+          <h4><b>- <u>Date limite:</u></b> <div class="task-form"> {% if task.dateLimite %}{{ task.dateLimite|date('d-m-Y') }}{% endif %}</div></h4>
+          <h4><b>- <u>Niveaux d'importance:</u></b> <div class="task-form"> {{ task.important.nom }}</div></h4>
+          <h4 class="check"><b>- <u>Fait:</u></b> {% if task.fait %}<i class="fa fa-check-square-o" aria-hidden="true"></i>{% else %}<i class="fa fa-times" aria-hidden="true"></i>{% endif %}</h4>
+          <div class="btn-form">
+            <a class="btn btn-link btn-white" href="{% if task.fait %}{{ path('task_edit_done', { 'id': task.id }) }}{% else %}{{ path('task_edit', { 'id': task.id }) }}{% endif %}">Editer</a>
+            <div class="btn-supprimer">
+              {{ form_start(delete_form) }}
+              <input type="submit" value="Supprimer" class="btn btn-link btn-white">
+              {{ form_end(delete_form) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="btn btn-link btn-retour" href="{{ path('task_index') }}">Retour</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% set todo = ['task_index', 'task_show', 'task_edit', 'task_new'] %}
+{% set done = ['task_done', 'task_show_done', 'task_edit_done'] %}
+{% set importance = ['important_index', 'important_show', 'important_edit', 'important_new'] %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 title">
+      TÂCHES
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-10 col-xs-push-1">
+      <nav id="custom-menu" class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <a href="{{ path('homepage') }}" class="navbar-brand scroll-top"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul class="nav navbar-nav nav-center">
+            <li class="onglet {% if app.request.attributes.get('_route') in todo %}hover{% endif %}"><a href="{{ path('task_index') }}">Tâches à effectuer</a>
+            </li>
+            <li class="onglet {% if app.request.attributes.get('_route') in done %}hover{% endif %}"><a href="{{ path('task_done') }}">Tâches accomplies</a>
+            </li>
+            <li class="onglet {% if app.request.attributes.get('_route') in importance %}hover{% endif %}"><a href="{{ path('important_index') }}">Importance des tâches</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

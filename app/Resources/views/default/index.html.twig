@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-fluid index">
+  <div class="row">
+    <div class="col-md-4 col-xs-12">
+      <div class="cercle">
+          <h3><a href="{{ path('task_index') }}">Tâches à effectuer</a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-push-4 col-xs-12">
+      <div class="cercle">
+          <h3><a href="{{ path('task_done') }}">Tâches accomplies</a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-push-8 col-xs-12">
+      <div class="cercle">
+          <h3 class="important"><a href="{{ path('important_index') }}">Importance des tâches</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
